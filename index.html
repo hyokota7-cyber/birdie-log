@@ -1115,6 +1115,322 @@
     font-size: 16px;
     line-height: 1;
   }
+
+  /* ===== ANALYTICS / Premium ===== */
+  .home-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(201, 169, 97, 0.15);
+    padding-bottom: 12px;
+  }
+
+  .home-tab {
+    flex: 1;
+    background: transparent;
+    border: 1px solid rgba(201, 169, 97, 0.2);
+    color: #8a7a55;
+    padding: 10px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .home-tab.active {
+    background: #c9a961;
+    color: #0f1f15;
+    border-color: #c9a961;
+  }
+
+  .home-tab-lock {
+    font-size: 10px;
+    opacity: 0.8;
+  }
+
+  .analytics-intro {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #d4c399;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 18px;
+    padding: 14px;
+    background: rgba(201, 169, 97, 0.05);
+    border: 1px solid rgba(201, 169, 97, 0.15);
+    border-radius: 8px;
+  }
+
+  .lock-card {
+    background: rgba(15, 35, 25, 0.6);
+    border: 1px solid rgba(201, 169, 97, 0.15);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .lock-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.15) 100%);
+    pointer-events: none;
+  }
+
+  .lock-card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .lock-card-icon {
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(201, 169, 97, 0.08);
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .lock-card-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #f4ecd8;
+    margin-bottom: 2px;
+  }
+
+  .lock-card-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #8a7a55;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+  }
+
+  .lock-card-badge {
+    margin-left: auto;
+    font-size: 18px;
+    opacity: 0.7;
+  }
+
+  .lock-card-cta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: #c9a961;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px;
+    background: rgba(201, 169, 97, 0.08);
+    border-radius: 6px;
+    border: 1px dashed rgba(201, 169, 97, 0.3);
+    position: relative;
+  }
+
+  /* ラウンド推移 LineChart */
+  .line-chart-wrap { margin-bottom: 14px; }
+  .line-chart-wrap:last-child { margin-bottom: 0; }
+
+  .line-chart-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #8a7a55;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .line-chart-svg {
+    width: 100%;
+    height: 140px;
+    display: block;
+  }
+
+  .chart-empty {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #8a7a55;
+    text-align: center;
+    padding: 24px 12px;
+    letter-spacing: 0.05em;
+  }
+
+  /* パー別 */
+  .par-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .par-stat-cell {
+    background: rgba(201, 169, 97, 0.05);
+    border: 1px solid rgba(201, 169, 97, 0.12);
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+
+  .par-stat-head {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #8a7a55;
+    letter-spacing: 0.15em;
+    margin-bottom: 6px;
+  }
+
+  .par-stat-score {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: #f4ecd8;
+    line-height: 1;
+  }
+
+  .par-stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: #8a7a55;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+
+  .par-stat-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #d4c399;
+    padding: 3px 2px;
+  }
+
+  .par-stat-gold { color: #c9a961; font-weight: 700; }
+
+  /* 番手別テーブル */
+  .club-agg-table {
+    background: rgba(15, 35, 25, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .club-agg-header,
+  .club-agg-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr 1fr;
+    gap: 4px;
+    padding: 10px 8px;
+    align-items: center;
+  }
+
+  .club-agg-header {
+    background: rgba(201, 169, 97, 0.08);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: #8a7a55;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .club-agg-header > div:first-child { text-align: left; }
+
+  .club-agg-row {
+    border-bottom: 1px solid rgba(201, 169, 97, 0.06);
+  }
+
+  .club-agg-row:last-child { border-bottom: none; }
+
+  .club-agg-club {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: #c9a961;
+    letter-spacing: 0.05em;
+  }
+
+  .club-agg-cell {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #f4ecd8;
+    text-align: center;
+  }
+
+  .club-agg-hint {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: #8a7a55;
+    margin-top: 10px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  /* DEVELOPER トグル */
+  .dev-toggle {
+    background: rgba(15, 35, 25, 0.6);
+    border: 1px solid rgba(201, 169, 97, 0.15);
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .dev-toggle-info { flex: 1; min-width: 0; }
+
+  .dev-toggle-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: #c9a961;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+
+  .dev-toggle-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: #8a7a55;
+    line-height: 1.5;
+  }
+
+  .dev-toggle-btn {
+    background: transparent;
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    color: #8a7a55;
+    padding: 8px 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+
+  .dev-toggle-btn.on {
+    background: #c9a961;
+    border-color: #c9a961;
+    color: #0f1f15;
+  }
+
+  .dev-toggle-btn:active { transform: scale(0.96); }
 </style>
 </head>
 <body>
@@ -1174,7 +1490,24 @@
 
   const STORAGE_KEY = 'birdie_log_rounds_v1';
   const COURSES_STORAGE_KEY = 'birdie_log_courses_v1';
+  const PREMIUM_STORAGE_KEY = 'birdie_log_premium_v1';
   const DATA_VERSION = 1;
+
+  // ===== Premium プラン管理 =====
+  function loadPremium() {
+    try {
+      const raw = localStorage.getItem(PREMIUM_STORAGE_KEY);
+      if (!raw) return false;
+      const parsed = JSON.parse(raw);
+      return parsed && parsed.isPremium === true;
+    } catch (e) { return false; }
+  }
+
+  function savePremium(isPremium) {
+    try {
+      localStorage.setItem(PREMIUM_STORAGE_KEY, JSON.stringify({ isPremium: !!isPremium }));
+    } catch (e) {}
+  }
 
   function loadCourses() {
     try {
@@ -1375,6 +1708,191 @@
     }
   }
 
+  // ===== ANALYTICS 集計ロジック（純粋関数。後で差し替え・テストしやすいよう App 外に切り出し） =====
+
+  // ホールの実打数（ペナルティ含む）
+  function _holeStrokes(h) {
+    if (!h || !h.shots) return 0;
+    return h.shots.length + h.shots.reduce((s, sh) => s + (PENALTY_STROKES[sh.penalty] || 0), 0);
+  }
+
+  // GIR 判定：当該ホールで規定打数以内にグリーンに乗ったか
+  function _isGirHole(h) {
+    if (!h.shots.length) return false;
+    const targetShots = h.par - 2;
+    if (targetShots <= 0) return h.shots.some(s => s.lie === 'グリーン');
+    return h.shots.slice(0, targetShots).some((s, idx) => {
+      const nextLie = h.shots[idx + 1] && h.shots[idx + 1].lie;
+      return nextLie === 'グリーン';
+    });
+  }
+
+  // 番手別スタッツ
+  function computeClubAggregates(rounds) {
+    const agg = {};
+    rounds.forEach(r => {
+      r.holes.forEach(h => {
+        h.shots.forEach((s, idx) => {
+          if (!s.club) return;
+          if (!agg[s.club]) {
+            agg[s.club] = { club: s.club, total: 0, straight: 0, distSum: 0, distCount: 0, teeShots: 0, teeFw: 0 };
+          }
+          const a = agg[s.club];
+          a.total++;
+          if (s.result === 'ストレート') a.straight++;
+          if (s.distance != null && !isNaN(s.distance)) {
+            a.distSum += Number(s.distance);
+            a.distCount++;
+          }
+          // ティーショット集計（Par4/5の1打目で、当該クラブが使われた場合）
+          if (idx === 0 && h.par >= 4) {
+            a.teeShots++;
+            if (s.result === 'ストレート') a.teeFw++;
+          }
+        });
+      });
+    });
+    return Object.values(agg).map(a => ({
+      club: a.club,
+      total: a.total,
+      straightRate: a.total ? Math.round((a.straight / a.total) * 100) : 0,
+      avgDistance: a.distCount ? Math.round(a.distSum / a.distCount) : null,
+      teeShots: a.teeShots,
+      fwRate: a.teeShots ? Math.round((a.teeFw / a.teeShots) * 100) : null,
+    })).sort((a, b) => {
+      const order = CLUBS.indexOf(a.club) - CLUBS.indexOf(b.club);
+      return order;
+    });
+  }
+
+  // パー別平均スコア・GIR率
+  function computeParAggregates(rounds) {
+    const buckets = { 3: { par: 3, holes: 0, scoreSum: 0, gir: 0 },
+                      4: { par: 4, holes: 0, scoreSum: 0, gir: 0 },
+                      5: { par: 5, holes: 0, scoreSum: 0, gir: 0 } };
+    rounds.forEach(r => {
+      r.holes.forEach(h => {
+        if (!h.shots.length) return;
+        const b = buckets[h.par];
+        if (!b) return;
+        b.holes++;
+        b.scoreSum += _holeStrokes(h);
+        if (_isGirHole(h)) b.gir++;
+      });
+    });
+    return [3, 4, 5].map(p => {
+      const b = buckets[p];
+      return {
+        par: p,
+        holes: b.holes,
+        avgScore: b.holes ? (b.scoreSum / b.holes) : null,
+        girRate: b.holes ? Math.round((b.gir / b.holes) * 100) : null,
+      };
+    });
+  }
+
+  // 直近 n ラウンドの推移（プレー日昇順）
+  function computeRecentRoundTrend(rounds, n) {
+    const played = rounds
+      .filter(r => r.holes.some(h => h.shots.length > 0))
+      .map(r => {
+        const playedHoles = r.holes.filter(h => h.shots.length > 0);
+        const totalScore = playedHoles.reduce((s, h) => s + _holeStrokes(h), 0);
+        const totalPar = playedHoles.reduce((s, h) => s + h.par, 0);
+        const putts = r.holes.reduce((s, h) => s + h.shots.filter(sh => sh.club === 'PT').length, 0);
+        return {
+          id: r.id,
+          playedAt: r.playedAt,
+          courseName: r.courseName,
+          holesCount: playedHoles.length,
+          totalScore,
+          totalPar,
+          vsPar: totalScore - totalPar,
+          putts,
+        };
+      })
+      .sort((a, b) => (a.playedAt || '').localeCompare(b.playedAt || ''));
+    return played.slice(-n);
+  }
+
+  // ===== LineChart（SVG 自前描画。後で Chart.js に差し替えやすいインターフェース） =====
+  function LineChart({ data, accessor, label, color, formatY, height }) {
+    // data: 任意配列 / accessor: (item) => 数値 / formatY: (v) => 表示文字列
+    const W = 320;  // viewBox基準幅
+    const H = height || 140;
+    const padL = 32, padR = 12, padT = 12, padB = 24;
+    const innerW = W - padL - padR;
+    const innerH = H - padT - padB;
+
+    const values = data.map(accessor).filter(v => v != null && !isNaN(v));
+    if (!values.length) {
+      return (
+        <div className="chart-empty">データなし</div>
+      );
+    }
+    const vMin = Math.min(...values);
+    const vMax = Math.max(...values);
+    const range = vMax - vMin || 1;
+    // 上下に少し余白
+    const yMin = vMin - range * 0.15;
+    const yMax = vMax + range * 0.15;
+    const yRange = yMax - yMin || 1;
+
+    const xStep = data.length > 1 ? innerW / (data.length - 1) : 0;
+    const points = data.map((d, i) => {
+      const v = accessor(d);
+      if (v == null || isNaN(v)) return null;
+      const x = padL + i * xStep;
+      const y = padT + innerH - ((v - yMin) / yRange) * innerH;
+      return { x, y, v, d };
+    }).filter(Boolean);
+
+    const pathD = points.map((p, i) => (i === 0 ? 'M' : 'L') + p.x.toFixed(1) + ',' + p.y.toFixed(1)).join(' ');
+
+    // Y軸ラベル（3段：max / mid / min）
+    const yTicks = [yMax, (yMin + yMax) / 2, yMin].map(v => ({
+      v, y: padT + innerH - ((v - yMin) / yRange) * innerH,
+    }));
+
+    const lineColor = color || '#c9a961';
+
+    return (
+      <div className="line-chart-wrap">
+        {label && <div className="line-chart-label">{label}</div>}
+        <svg viewBox={`0 0 ${W} ${H}`} className="line-chart-svg" preserveAspectRatio="none">
+          {/* Y軸ガイド */}
+          {yTicks.map((t, i) => (
+            <g key={i}>
+              <line x1={padL} x2={W - padR} y1={t.y} y2={t.y} stroke="rgba(201, 169, 97, 0.1)" strokeWidth="1" />
+              <text x={padL - 4} y={t.y + 3} textAnchor="end" fontSize="9" fill="#8a7a55" fontFamily="JetBrains Mono">
+                {formatY ? formatY(t.v) : Math.round(t.v)}
+              </text>
+            </g>
+          ))}
+          {/* 折れ線 */}
+          <path d={pathD} fill="none" stroke={lineColor} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+          {/* 点 */}
+          {points.map((p, i) => (
+            <circle key={i} cx={p.x} cy={p.y} r="3.5" fill={lineColor} stroke="#0f1f15" strokeWidth="1.5" />
+          ))}
+          {/* X軸ラベル（最初・最後だけ） */}
+          {points.length > 0 && (
+            <>
+              <text x={points[0].x} y={H - 6} textAnchor="start" fontSize="9" fill="#8a7a55" fontFamily="JetBrains Mono">
+                {points[0].d.playedAt ? points[0].d.playedAt.slice(5).replace('-', '/') : ''}
+              </text>
+              {points.length > 1 && (
+                <text x={points[points.length - 1].x} y={H - 6} textAnchor="end" fontSize="9" fill="#8a7a55" fontFamily="JetBrains Mono">
+                  {points[points.length - 1].d.playedAt ? points[points.length - 1].d.playedAt.slice(5).replace('-', '/') : ''}
+                </text>
+              )}
+            </>
+          )}
+        </svg>
+      </div>
+    );
+  }
+
   function App() {
     const [view, setView] = useState('rounds');
     const [rounds, setRounds] = useState(() => loadRounds());
@@ -1414,8 +1932,12 @@
     const [courseSearchText, setCourseSearchText] = useState('');
     const [startHole, setStartHole] = useState('OUT');
 
+    // Premium プラン（手動切替の開発者モード）
+    const [isPremium, setIsPremium] = useState(() => loadPremium());
+
     useEffect(() => { saveRounds(rounds); }, [rounds]);
     useEffect(() => { saveCourses(courses); }, [courses]);
+    useEffect(() => { savePremium(isPremium); }, [isPremium]);
 
     const currentRound = rounds.find(r => r.id === currentRoundId);
 
@@ -1745,6 +2267,19 @@
         </div>
 
         <div className="content">
+          {(view === 'rounds' || view === 'analytics') && (
+            <div className="home-tabs">
+              <button
+                className={'home-tab ' + (view === 'rounds' ? 'active' : '')}
+                onClick={() => setView('rounds')}
+              >ROUNDS</button>
+              <button
+                className={'home-tab ' + (view === 'analytics' ? 'active' : '')}
+                onClick={() => setView('analytics')}
+              >ANALYTICS{!isPremium && <span className="home-tab-lock">🔒</span>}</button>
+            </div>
+          )}
+
           {view === 'rounds' && (
             <>
               <div className="section-label">YOUR ROUNDS</div>
@@ -1924,8 +2459,127 @@
               <div className="backup-hint">
                 Excelファイル（.xlsx）からコース情報を取り込めます。期待する列: ゴルフ場名・コース名・HOLE・PAR・ヤード(バック)・ヤード(レギュラー)。ラウンド開始時に取り込み済みコースを選ぶと、各ホールのPARとヤード数が自動でセットされます。
               </div>
+
+              {/* 開発者モード：Premium プラン手動切替（課金処理は後フェーズ） */}
+              <div className="section-label" style={{ marginTop: 28 }}>DEVELOPER</div>
+              <div className="dev-toggle">
+                <div className="dev-toggle-info">
+                  <div className="dev-toggle-title">Premium プラン</div>
+                  <div className="dev-toggle-sub">
+                    {isPremium ? 'ANALYTICS が解放されています' : '手動で ON にすると ANALYTICS が解放されます'}
+                  </div>
+                </div>
+                <button
+                  className={'dev-toggle-btn ' + (isPremium ? 'on' : 'off')}
+                  onClick={() => setIsPremium(!isPremium)}
+                >{isPremium ? 'ON' : 'OFF'}</button>
+              </div>
             </>
           )}
+
+          {view === 'analytics' && (() => {
+            // Premium 未解放 → ロックUI（カードの形と入口は見せる）
+            if (!isPremium) {
+              return (
+                <>
+                  <div className="analytics-intro">
+                    全ラウンドを横断した詳細スタッツ。<br />
+                    あなたの傾向を見える化します。
+                  </div>
+                  {[
+                    { icon: '🏌️', title: '番手別スタッツ', sub: 'クラブごとのFW率・ストレート率' },
+                    { icon: '📈', title: 'ラウンド推移', sub: '直近10ラウンドのスコア・パットの折れ線' },
+                  ].map(card => (
+                    <div key={card.title} className="lock-card">
+                      <div className="lock-card-head">
+                        <span className="lock-card-icon">{card.icon}</span>
+                        <div>
+                          <div className="lock-card-title">{card.title}</div>
+                          <div className="lock-card-sub">{card.sub}</div>
+                        </div>
+                        <span className="lock-card-badge">🔒</span>
+                      </div>
+                      <div className="lock-card-cta">Premium で解放</div>
+                    </div>
+                  ))}
+                </>
+              );
+            }
+
+            // Premium 解放 → 本体
+            const hasAnyData = rounds.some(r => r.holes.some(h => h.shots.length > 0));
+            if (!hasAnyData) {
+              return (
+                <div className="empty-state">
+                  <div className="empty-state-icon">📊</div>
+                  <div className="empty-state-text">データがまだありません<br />ラウンドを記録してください</div>
+                </div>
+              );
+            }
+
+            const clubAgg = computeClubAggregates(rounds);
+            const parAgg = computeParAggregates(rounds);
+            const trend = computeRecentRoundTrend(rounds, 10);
+
+            return (
+              <>
+                <div className="section-label">PREMIUM ANALYTICS</div>
+
+                {/* ラウンド推移グラフ */}
+                <div className="panel">
+                  <div className="panel-title">Recent Trend · {trend.length} rounds</div>
+                  {trend.length < 2 ? (
+                    <div className="chart-empty">2ラウンド以上で推移が表示されます</div>
+                  ) : (
+                    <>
+                      <LineChart
+                        data={trend}
+                        accessor={(d) => d.vsPar}
+                        label="SCORE vs PAR"
+                        color="#c9a961"
+                        formatY={(v) => (v > 0 ? '+' + Math.round(v) : Math.round(v))}
+                      />
+                      <LineChart
+                        data={trend}
+                        accessor={(d) => d.putts}
+                        label="TOTAL PUTTS"
+                        color="#5dd39e"
+                        formatY={(v) => Math.round(v)}
+                      />
+                    </>
+                  )}
+                </div>
+
+                {/* 番手別 */}
+                <div className="panel">
+                  <div className="panel-title">By Club</div>
+                  {clubAgg.length === 0 ? (
+                    <div className="chart-empty">データなし</div>
+                  ) : (
+                    <div className="club-agg-table">
+                      <div className="club-agg-header">
+                        <div>CLUB</div>
+                        <div>本数</div>
+                        <div>FW率</div>
+                        <div>ストレート</div>
+                      </div>
+                      {clubAgg.map(c => (
+                        <div key={c.club} className="club-agg-row">
+                          <div className="club-agg-club">{c.club}</div>
+                          <div className="club-agg-cell">{c.total}</div>
+                          <div className="club-agg-cell">{c.fwRate != null ? c.fwRate + '%' : '—'}</div>
+                          <div className="club-agg-cell">{c.straightRate}%</div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <div className="club-agg-hint">
+                    FW率はPar4/5の1打目（ティーショット）のみで集計。
+                  </div>
+                </div>
+              </>
+            );
+          })()}
 
           {view === 'round' && currentRound && (
             <>
